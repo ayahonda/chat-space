@@ -1,0 +1,41 @@
+.chat-main
+  .chat-main__group-info
+    .left-content
+      .left-content__group-name
+        test
+      .left-content__group-member
+        Member : masa
+    = link_to "Edit", "#", class: "edit-btn"
+  .chat-main__message-list
+    .post-content
+      .post-content__info
+        .post-content__info__user-name
+          masa
+        .post-content__info__date
+          2020/05/16(Sat) 08:56:01
+      .post-content__message
+        おはよう！
+    .post-content
+      .post-content__info
+        .post-content__info__user-name
+          masa
+        .post-content__info__date
+          2020/05/16(Sat) 17:58:01
+      .post-content__message
+        今日は夜から雨
+    .post-content
+      .post-content__info
+        .post-content__info__user-name
+          masa
+        .post-content__info__date
+          2020/05/16(Sat) 23:56:01
+      .post-content__message
+        おやすみ
+  .chat-main__message-form
+    .input-box
+      .input-box__text
+        %input.input-box__text__form{type: "text", placeholder: "type a message"}
+      %label.input-box__image
+        = icon('far', 'image')
+        %input.input-box__image__select-file{type: "file"}
+    %input.submit-btn{type: "submit", value: "Send"}
