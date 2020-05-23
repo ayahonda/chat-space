@@ -58,14 +58,17 @@ $btn-color: #38aef0;
 
 .group-list {
   padding: 20px 20px 40px 20px;
-  color: $main-text-color;
   font-weight: bold;
+  .group_link{
+    text-decoration: none;
+    color: $main-text-color;
+  }
   &__group-name {
     font-size: 15px;
     margin-bottom: 5px;
   }
   &__group-message {
-    font-size: 11px;
+    font-size: 11px;     
   }
 }
 
