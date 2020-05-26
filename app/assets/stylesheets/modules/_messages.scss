@@ -90,7 +90,6 @@ $btn-color: #38aef0;
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;
-    display: flex;
   }
 }
 
@@ -140,29 +139,31 @@ $btn-color: #38aef0;
 }
 
 .input-box {
-  @include align-block;
-  position: relative;
+  form {
+    display: flex;
+  }
   &__text {
     height: 50px;
     width: calc(100vw - 300px - 195px);
-    &__form {
-      height: 100%;
-      width: 100%;
-      padding: 0 10px;
-      border-style: none;
-    }
+    border-style: none;
+    padding: 0 40px 0 10px;
   }
   &__image {
-    position: absolute;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    &__select-file {
-      display: none;
+    position: relative;
+    @include align-block;
+    &__label {
+      position: absolute;
+      right: 10px;
     }
   }
 }
-
+.icon {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
 .submit-btn {
   height: 50px;
   width: 100px;
