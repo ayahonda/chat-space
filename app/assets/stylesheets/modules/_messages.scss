@@ -26,7 +26,10 @@ $btn-color: #38aef0;
 
 .side-bar {
   width: 300px;
+  height: 100%;
   background-color: #2f3e51;
+  position: fixed;
+  left: 0;
   &__user-name {
     height: 100px;
     background-color: #253141;
@@ -73,23 +76,29 @@ $btn-color: #38aef0;
 }
 
 .chat-main {
-  width: calc(100vw - 300px);
-  background-color: $main-text-color;
+  width: 100vw;
+  padding-left: 300px;
   &__group-info {
+    background-color: $main-text-color;
     height: 100px;
+    width: calc(100vw - 300px);
     border-bottom: 1px solid #eeeeee;
     padding: 0 40px;
     @include justify-content(space-between);
+    position: fixed;
+    top: 0;
+    right: 0;
   }
   &__message-list {
-    height: calc(100vh - 190px);
     background-color: #fafafa;
-    padding: 35px 0 0 40px;
+    padding: 135px 0 90px 40px;
   }
   &__message-form {
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;
+    position: fixed;
+    bottom: 0;
   }
 }
 
@@ -103,6 +112,11 @@ $btn-color: #38aef0;
   &__group-member {
     font-size: 12px;
     color: $sub-text-color;
+    display: flex;
+    li {
+      margin-left: 5px;
+      list-style: none;
+    }
   }
 }
 
