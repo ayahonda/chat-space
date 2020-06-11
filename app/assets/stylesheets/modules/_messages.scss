@@ -26,14 +26,18 @@ $btn-color: #38aef0;
 
 .side-bar {
   width: 300px;
-  height: 100%;
-  background-color: #2f3e51;
-  position: fixed;
-  left: 0;
+  color: white;
+  float: left;
   &__user-name {
     height: 100px;
     background-color: #253141;
     @include align-block;
+  }
+  &__group-lists {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    overflow: scroll;
   }
 }
 
@@ -58,58 +62,14 @@ $btn-color: #38aef0;
     }
   }
 }
-
 .group-list {
-  padding: 20px 20px 40px 20px;
-  font-weight: bold;
-  .group_link{
-    text-decoration: none;
-    color: $main-text-color;
-  }
+  margin-bottom: 40px;
+  color: white;
   &__group-name {
     font-size: 15px;
     margin-bottom: 5px;
   }
   &__group-message {
-    font-size: 11px;     
-  }
-}
-
-.chat-main {
-  width: 100vw;
-  padding-left: 300px;
-  &__group-info {
-    background-color: $main-text-color;
-    height: 100px;
-    width: calc(100vw - 300px);
-    border-bottom: 1px solid #eeeeee;
-    padding: 0 40px;
-    @include justify-content(space-between);
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-  &__message-list {
-    background-color: #fafafa;
-    padding: 135px 0 90px 40px;
-  }
-  &__message-form {
-    height: 90px;
-    background-color: #d2d2d2;
-    padding: 20px 40px;
-    position: fixed;
-    bottom: 0;
-  }
-}
-
-.left-content {
-  padding-top: 35px;
-  &__group-name {
-    font-size: 20px;
-    color: #333333;
-    margin-bottom: 15px;
-  }
-  &__group-member {
     font-size: 12px;
     color: $sub-text-color;
     display: flex;
@@ -119,6 +79,48 @@ $btn-color: #38aef0;
     }
   }
 }
+
+.chat-main {
+  width: calc(100vw - 300px);
+  float: left;
+  &__group-info {
+    background-color: $main-text-color;
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0 40px;
+    @include justify-content(space-between);
+    overflow: scroll;
+    .left-content {
+      margin-top: 35px;
+      &__group-name {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      &__group-member {
+        display: flex;
+        font-size: 12px;
+        color: #999999;
+        li {
+          list-style: none;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  &__message-list {
+    background-color: #fafafa;
+    padding: 46px 40px;
+    height: calc(100vh - 190px);
+    overflow: scroll;
+  }
+  &__message-form {
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+  }
+}
+
 
 .edit-btn {
   color: $btn-color;
@@ -185,4 +187,5 @@ $btn-color: #38aef0;
   color: $main-text-color;
   cursor: pointer;
   margin-left: 15px;
+  border-style: none;
 }
