@@ -64,8 +64,10 @@ $btn-color: #38aef0;
 }
 .group-list {
   margin-bottom: 40px;
-  text-decoration: none;
-  color: white;
+  &__link {
+    text-decoration: none;
+    color: white;
+  }
   &__group-name {
     font-size: 15px;
     margin-bottom: 5px;

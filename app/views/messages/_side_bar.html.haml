@@ -10,9 +10,9 @@
           = icon('fas', 'cog', class: 'top-items__icons--cog')
   .side-bar__group-lists
     - current_user.groups.each do |group|
-      = link_to group_messages_path(group), class: "group-list" do
-        .group-list__group-name
-          = group.name
-        .group-list__group-message
-          = group.show_last_message
-  
+      .group-list
+        = link_to group_messages_path(group), class: "group-list__link" do
+          .group-list__group-name
+            = group.name
+          .group-list__group-message
+            = group.show_last_message
